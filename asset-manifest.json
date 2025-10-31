@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/my-react-site/static/css/main.18a6cd9f.css",
+    "main.css": "/my-react-site/static/css/main.a628102f.css",
     "main.js": "/my-react-site/static/js/main.12fed889.js",
     "static/media/banner.mp4": "/my-react-site/static/media/banner.75abc0705cde4cfea92b.mp4",
     "static/media/steering-wheel-icon.png": "/my-react-site/static/media/steering-wheel-icon.3325774d104e22b633b5.png",
@@ -12,11 +12,11 @@
     "static/media/messenger-icon.png": "/my-react-site/static/media/messenger-icon.738d1b58f56615fe8b4f.png",
     "static/media/mitsulogo.png": "/my-react-site/static/media/mitsulogo.f3d6ecc7f96918818578.png",
     "index.html": "/my-react-site/index.html",
-    "main.18a6cd9f.css.map": "/my-react-site/static/css/main.18a6cd9f.css.map",
+    "main.a628102f.css.map": "/my-react-site/static/css/main.a628102f.css.map",
     "main.12fed889.js.map": "/my-react-site/static/js/main.12fed889.js.map"
   },
   "entrypoints": [
-    "static/css/main.18a6cd9f.css",
+    "static/css/main.a628102f.css",
     "static/js/main.12fed889.js"
   ]
 }
