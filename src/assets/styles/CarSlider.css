@@ -1,0 +1,149 @@
+/* Nền trắng cho toàn bộ section */
+.car-slider-container {
+  background-color: #fff;
+  color: #000;
+  padding: 4rem 0;
+  overflow: hidden; 
+  position: relative;
+  border-bottom: 1px solid #eee;
+}
+
+/* 1. CSS CHO SLIDER */
+.car-slider-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto; 
+  overflow: hidden;
+}
+
+/* 'Đường ray' chứa các slide */
+.car-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Hiệu ứng trượt */
+}
+
+/* Class mới cho Link để bỏ gạch chân */
+.car-slide-link {
+  text-decoration: none; /* Bỏ gạch chân */
+  color: inherit; /* Dùng màu chữ của cha */
+  flex: 0 0 33.33%; /* Chuyển flex và width ra ngoài */
+  width: 33.33%;
+}
+
+/* Từng slide (xe) */
+.car-slide {
+  text-align: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  position: relative; 
+  z-index: 1;
+}
+
+/* Animation khi di chuột vào */
+.car-slide:hover {
+  transform: scale(1.05); /* Phóng to 5% */
+  z-index: 2; /* Nổi lên trên */
+}
+
+/* Vòng tròn xám mờ khi hover */
+.car-slide::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 90%; 
+  padding-top: 90%;
+  
+  background-color: rgba(120, 120, 120, 0.3); 
+  border-radius: 50%;
+  
+  z-index: 3; 
+  
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+}
+
+/* Hiển thị vòng tròn khi hover */
+.car-slide:hover::after {
+  opacity: 1; 
+}
+
+
+.car-slide img {
+  width: 100%;
+  /* THAY ĐỔI CHÍNH Ở ĐÂY: Đặt chiều cao cố định */
+  height: 180px; 
+  object-fit: contain; /* Đảm bảo ảnh không bị méo, co lại cho vừa */
+  margin-bottom: 1rem;
+}
+
+.car-slide h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.car-slide p {
+  font-size: 1rem;
+  color: #333;
+  position: relative;
+  z-index: 1;
+}
+
+/* Nút mũi tên */
+.slider-arrow {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 3rem;
+  color: #aaa;
+  cursor: pointer;
+  z-index: 5;
+  padding: 0 2rem;
+}
+
+.slider-arrow:hover {
+  color: #000;
+}
+
+.left-arrow {
+  left: -1rem;
+}
+
+.right-arrow {
+  right: -1rem;
+}
+
+/* 3. CSS CHO NÚT HÀNH ĐỘNG */
+.car-actions {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 3rem; 
+}
+
+.action-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.action-item svg {
+  width: 30px;
+  height: 30px;
+}

@@ -1,0 +1,83 @@
+.footer-container {
+  background-color: #222; /* Nền đen/xám đậm */
+  color: #ccc; /* Chữ xám nhạt */
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.footer-main {
+  border-bottom: 1px solid #444; /* Đường kẻ ngăn cách */
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-heading {
+  font-weight: 700;
+  color: #fff; /* Tiêu đề màu trắng */
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.footer-container p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Danh sách link */
+.footer-links {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #e60012; /* Màu đỏ Mitsubishi */
+  padding-left: 5px; /* Hiệu ứng thụt vào khi hover */
+}
+
+/* Icon mạng xã hội */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #444;
+  color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #e60012; /* Màu đỏ Mitsubishi */
+  color: #fff;
+}
+
+/* Phần bản quyền */
+.footer-copyright {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.footer-copyright p {
+  margin: 0;
+}

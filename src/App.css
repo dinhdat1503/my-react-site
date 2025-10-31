@@ -1,38 +1,26 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* CSS cho nút "Xem Tất Cả" */
+.view-all-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  /* Nút này sẽ nằm trên nền trắng, sau CarSlider */
+  background-color: #fff; 
+  padding: 1rem 0 4rem 0; /* Thêm padding */
+  border-bottom: 1px solid #eee;
 }
 
-.App-link {
-  color: #61dafb;
+.view-all-button {
+  background-color: #333; /* Nền đen */
+  color: #fff; /* Chữ trắng */
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.view-all-button:hover {
+  background-color: #e60012; /* Màu đỏ của Mitsubishi khi hover */
+  color: #fff;
 }

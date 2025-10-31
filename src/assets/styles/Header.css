@@ -1,0 +1,76 @@
+/* Đặt vào file src/assets/styles/Header.css */
+
+.header-container {
+  position: absolute; /* Quan trọng: Giúp header nổi lên trên */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Căn các mục ra xa nhau */
+  align-items: center;
+  padding: 1rem 3rem; /* Tăng khoảng đệm */
+  background-color: transparent; /* Nền trong suốt */
+  z-index: 10; /* Đảm bảo header luôn ở lớp trên cùng */
+  color: white; /* Màu chữ mặc định là trắng */
+}
+
+.header-logo img {
+  height: 40px; /* Chỉnh kích thước logo */
+}
+
+.header-nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem; /* Khoảng cách giữa các link */
+  font-weight: 600;
+}
+
+.header-contact {
+  display: flex;
+  flex-direction: column; /* Xếp 2 SĐT chồng lên nhau */
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.header-container {
+  /* 1. Đổi 'absolute' thành 'fixed' để nó luôn dính ở trên */
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: transparent; /* Nền trong suốt mặc định */
+  z-index: 10;
+  color: white;
+
+  /* 2. Thêm hiệu ứng chuyển động mượt */
+  transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.header-logo img {
+  height: 40px;
+}
+
+.header-nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 600;
+}
+
+.header-contact {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+/* 3. THÊM MỚI: Đây là class khi cuộn chuột */
+.header-container.scrolled {
+  background-color: #000; /* Đổi sang nền đen */
+  padding: 0.5rem 3rem; /* Thu nhỏ padding lại một chút cho đẹp */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Thêm bóng mờ */
+}

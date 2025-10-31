@@ -1,0 +1,44 @@
+.floating-buttons-container {
+  position: fixed; /* Quan trọng: Giữ cố định trên màn hình */
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column; /* Xếp chồng lên nhau */
+  gap: 0.75rem; /* Khoảng cách giữa các nút */
+  z-index: 1000; /* Luôn nổi lên trên */
+}
+
+.floating-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* Bo tròn */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1); /* Phóng to khi di chuột */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.floating-btn img {
+  width: 28px; /* Kích thước icon */
+  height: 28px;
+  object-fit: contain;
+}
+
+/* Màu nền cho từng nút (bạn có thể thay đổi) */
+.zalo-btn {
+  background-color: #0068ff;
+}
+
+.messenger-btn {
+  background-color: #0084ff;
+}
+
+.drive-btn {
+  background-color: #e60012; /* Màu đỏ Mitsubishi */
+}

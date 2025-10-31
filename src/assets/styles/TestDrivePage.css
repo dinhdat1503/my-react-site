@@ -1,0 +1,62 @@
+    .test-drive-page {
+  padding-top: 100px; /* Khoảng cách với Header */
+  padding-bottom: 5rem;
+  background-color: #f8f9fa; /* Nền xám nhạt cho cả trang */
+  min-height: 100vh;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Khung bọc form */
+.test-drive-form-container {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Tùy chỉnh form của Bootstrap */
+.form-label {
+  font-weight: 600;
+  color: #444;
+}
+
+.form-control,
+.form-select {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #e60012; /* Màu đỏ Mitsubishi khi focus */
+  box-shadow: 0 0 0 0.25rem rgba(230, 0, 18, 0.25);
+}
+
+/* Nút Submit tùy chỉnh */
+.btn-submit-drive {
+  background-color: #e60012; /* Màu đỏ Mitsubishi */
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.8rem 2.5rem;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-submit-drive:hover {
+  background-color: #c00010; /* Màu đỏ đậm hơn */
+  color: #fff;
+  transform: translateY(-2px);
+}
