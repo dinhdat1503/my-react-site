@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../assets/styles/CarSlider.css';
 import { Link } from 'react-router-dom';
 
@@ -50,25 +50,37 @@ const carData = [
 const CarSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  // State để quản lý chiều rộng slide (responsive)
+  const [slideWidthPercent, setSlideWidthPercent] = useState(
+    window.innerWidth < 768 ? 100 : 33.33
+  );
+
+  // Effect để "lắng nghe" thay đổi kích thước màn hình
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setSlideWidthPercent(100); // Màn hình nhỏ -> 1 xe
+      } else {
+        setSlideWidthPercent(33.33); // Màn hình lớn -> 3 xe
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []); // [] đảm bảo effect này chỉ chạy 1 lần
+
   const handleNext = () => {
-    // Dùng (prevIndex + 1) % 6 (vì có 6 xe)
     setActiveIndex((prevIndex) => (prevIndex + 1) % carData.length);
   };
-
   const handlePrev = () => {
-    // Dùng (prevIndex - 1 + 6) % 6
     setActiveIndex((prevIndex) => (prevIndex - 1 + carData.length) % carData.length);
   };
 
-  // Vẫn giữ logic 3 xe (chiều rộng 33.33%)
-  const slideWidthPercent = 33.33; 
+  // Logic transform dùng state động
   const initialOffsetPercent = (100 - slideWidthPercent) / 2;
-  // activeIndex sẽ từ 0 đến 5
   const transformValue = `translateX(calc(${initialOffsetPercent}% - (${activeIndex} * ${slideWidthPercent}%)))`;
 
   return (
     <div className="car-slider-container">
-      {/* KHU VỰC SLIDER ẢNH */}
       <div className="car-slider-wrapper">
         <button onClick={handlePrev} className="slider-arrow left-arrow">‹</button>
         
@@ -78,7 +90,9 @@ const CarSlider = () => {
               <Link 
                 to={`/car/${car.name}`} 
                 key={car.name} 
-                className="car-slide-link" 
+                className="car-slide-link"
+                // Thêm style động cho chiều rộng
+                style={{ flexBasis: `${slideWidthPercent}%`, width: `${slideWidthPercent}%` }}
               >
                 <div className='car-slide'>
                   <img src={car.image} alt={car.name} />
@@ -89,21 +103,13 @@ const CarSlider = () => {
             );
           })}
         </div>
-
         <button onClick={handleNext} className="slider-arrow right-arrow">›</button>
       </div>
 
-      {/* KHU VỰC NÚT HÀNH ĐỘNG */}
       <div className="car-actions">
-        <div className="action-item">
-          <span>BẢNG GIÁ</span>
-        </div>
-        <div className="action-item">
-          <span>ĐĂNG KÝ LÁI THỬ</span>
-        </div>
-        <div className="action-item">
-          <span>KHUYẾN MÃI</span>
-        </div>
+        <div className="action-item"><span>BẢNG GIÁ</span></div>
+        <div className="action-item"><span>ĐĂNG KÝ LÁI THỬ</span></div>
+        <div className="action-item"><span>KHUYẾN MÃI</span></div>
       </div>
     </div>
   );

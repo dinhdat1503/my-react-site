@@ -1,19 +1,19 @@
 .footer-container {
-  background-color: #222; /* Nền đen/xám đậm */
-  color: #ccc; /* Chữ xám nhạt */
+  background-color: #222;
+  color: #ccc;
   padding-top: 4rem;
   padding-bottom: 2rem;
 }
 
 .footer-main {
-  border-bottom: 1px solid #444; /* Đường kẻ ngăn cách */
+  border-bottom: 1px solid #444;
   padding-bottom: 2rem;
   margin-bottom: 2rem;
 }
 
 .footer-heading {
   font-weight: 700;
-  color: #fff; /* Tiêu đề màu trắng */
+  color: #fff;
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
   text-transform: uppercase;
@@ -25,7 +25,6 @@
   line-height: 1.6;
 }
 
-/* Danh sách link */
 .footer-links {
   list-style: none;
   padding-left: 0;
@@ -43,11 +42,10 @@
 }
 
 .footer-links a:hover {
-  color: #e60012; /* Màu đỏ Mitsubishi */
-  padding-left: 5px; /* Hiệu ứng thụt vào khi hover */
+  color: #e60012;
+  padding-left: 5px;
 }
 
-/* Icon mạng xã hội */
 .social-icons {
   display: flex;
   gap: 1rem;
@@ -68,11 +66,10 @@
 }
 
 .social-icons a:hover {
-  background-color: #e60012; /* Màu đỏ Mitsubishi */
+  background-color: #e60012;
   color: #fff;
 }
 
-/* Phần bản quyền */
 .footer-copyright {
   font-size: 0.85rem;
   color: #888;
@@ -80,4 +77,25 @@
 
 .footer-copyright p {
   margin: 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .footer-container {
+    text-align: center;
+  }
+  
+  .footer-main .col-lg-4,
+  .footer-main .col-lg-2,
+  .footer-main .col-lg-3 {
+    text-align: center;
+  }
+  
+  .footer-links {
+    padding-left: 0;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
 }

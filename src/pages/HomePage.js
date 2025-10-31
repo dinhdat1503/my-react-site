@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // 1. Import Link
+import { Link } from 'react-router-dom';
 import HeroSection from '../components/HeroSection';
 import CarSlider from '../components/CarSlider';
-// 2. Import file CSS (nếu bạn có App.css hoặc index.css)
-import '../App.css'; // Hoặc file CSS toàn cục của bạn
+// Import các component khác nếu bạn có (Features, SpecsTable...)
+// import Features from '../components/Features'; 
 
 const HomePage = () => {
   return (
@@ -11,7 +11,7 @@ const HomePage = () => {
       <HeroSection />
       <CarSlider />
       
-      {/* 3. Thêm nút bấm ở đây */}
+      {/* Nút Xem Tất Cả */}
       <div className="view-all-container">
         <Link to="/all-cars" className="view-all-button">
           Xem Tất Cả Dòng Xe
@@ -19,7 +19,9 @@ const HomePage = () => {
       </div>
 
       {/* <Features /> */}
-      {/* <OtherComponents /> */}
+      {/* <SpecsTable /> */}
+      {/* <Pricing /> */}
+      {/* <ContactForm /> */}
     </>
   );
 };
